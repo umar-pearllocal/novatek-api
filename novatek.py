@@ -101,6 +101,7 @@ class Novatek:
     return self._get(2008, [('par', flag)])
   
   # 2009: MAX_RECODE_TIME?
+  # 2015: par 1 start livestream on baseuserl/xxx.mov
   
   def ping(self):
     # What does this do? Check battery?
