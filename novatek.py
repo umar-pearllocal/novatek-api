@@ -153,6 +153,8 @@ class Novatek:
   def has_sdcard(self):
     x = self._get_xml(3024)
     return x.find('./Value').text == '1'
+
+  #3028 par 0 -> switch camera
   
   def delete_file(self, path):
     # Full Windows-style path, A:\Novatek\...
