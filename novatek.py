@@ -148,6 +148,7 @@ class Novatek:
     
   # 3017? -> Value 32010764288, 32005423104... disk free space in bytes?
   # 3019? -> Value 1, or 5? something to do with charging?
+  # 3023? the app said basic auth logon 
   
   def has_sdcard(self):
     x = self._get_xml(3024)
