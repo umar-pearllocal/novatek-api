@@ -101,6 +101,7 @@ class Novatek:
     return self._get(2008, [('par', flag)])
   
   # 2009: MAX_RECODE_TIME?
+  # 2015: Start Streaming on rtsp://baseurl/xxx.mov
   
   def ping(self):
     # What does this do? Check battery?
@@ -154,7 +155,7 @@ class Novatek:
     x = self._get_xml(3024)
     return x.find('./Value').text == '1'
 
-  #3028 par 0 -> switch camera
+  #3028 par 0/1/2/3-> switch camera to front/both/motion_detect/back
   
   def delete_file(self, path):
     # Full Windows-style path, A:\Novatek\...
